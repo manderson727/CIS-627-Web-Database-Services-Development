@@ -51,18 +51,13 @@ initial-scale=1, shrink-to-fit=no">
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'add_category' %}">
+                <a class="nav-link" href="{% url 'add_cateory' %}">
                     Add a New Category
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'auth_logout' %}?next=/rango/">
                     Logout
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'auth_password_change' %}">
-                    Change Password
                 </a>
             </li>
             {% else %}
@@ -84,7 +79,7 @@ initial-scale=1, shrink-to-fit=no">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             {% block sidebar_block %}
-            <!-- get_category_list category -->
+            {% get_category_list category %}
             {% endblock %}
         </div>
         <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
@@ -103,7 +98,8 @@ initial-scale=1, shrink-to-fit=no">
 </script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script
-        src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js">
+        src=
+                "http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js">
 </script>
 </body>
 </html>
