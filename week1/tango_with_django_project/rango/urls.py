@@ -18,4 +18,6 @@ urlpatterns = [
     url(r'^restricted/', views.restricted, name='restricted'),
     # url(r'^logout/$', views.user_logout, name='logout'),
     url(r'^like/$', views.like_category, name='like_category'),
+    url(r'^suggest/$', views.suggest_category, name='suggest_category'),
+    url(r'ˆadd/$', views.auto_add_page, name='auto_-add_page'),
 ]

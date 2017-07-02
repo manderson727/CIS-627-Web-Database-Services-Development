@@ -14,4 +14,3 @@ $("#about-btn").click( function(event) {
     $("#msg").html(msgstr)
 });
 });
-
