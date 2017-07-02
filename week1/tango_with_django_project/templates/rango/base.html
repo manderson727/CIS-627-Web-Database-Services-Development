@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 {% load rango_template_tags %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="{% static 'js/rango-jquery.js' %}"></script>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -84,7 +86,8 @@ initial-scale=1, shrink-to-fit=no">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             {% block sidebar_block %}
-            <!-- get_category_list category -->
+            <!--get_category_list category-->
+            <input class="input-medium search-query" type="text" name="suggestion" value="" id="suggestion" />
             {% endblock %}
         </div>
         <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
@@ -105,5 +108,6 @@ initial-scale=1, shrink-to-fit=no">
 <script
         src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js">
 </script>
+<script src="{% static "js/rango-ajax.js" %}"></script>
 </body>
 </html>
